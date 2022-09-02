@@ -11,6 +11,9 @@
 # production
 /build
 
+# components
+Homepage-copy.js
+
 # misc
 .DS_Store
 .env.local
