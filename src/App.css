@@ -15,7 +15,8 @@ body {
   width: 50%;
 
   /* şimdilik böyle dursun sonra değiştireceğiz */
-  height: 60vh;
+    min-height: 60vh;
+    max-height: fit-content;
 }
 
 .main-box h1 {
@@ -23,7 +24,7 @@ body {
   font-size: 1.6em;
   letter-spacing: 0.1em;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   margin-top: 10px;
 }
 
@@ -56,7 +57,7 @@ body {
 
 
 
-li{
+li {
   /* list-style-type: circle; */
   /* list-style-type: decimal; */
   /* list-style-position: inside; */
@@ -69,21 +70,20 @@ li{
   cursor: pointer;
 }
 
-li .x-icon{
+li .x-icon {
   display: none;
-	/* position: absolute; */
-  
-  margin: auto 0;
-	font-size: 20px;
-	color: #cc9a9a;
-  margin-top: -15px;
-	/* margin-bottom: 0px; */
-	transition: color 0.2s ease-out;
-  cursor: pointer;
+  /* position: absolute; */
 
+  margin: auto 0;
+  font-size: 20px;
+  color: #cc9a9a;
+  margin-top: -15px;
+  /* margin-bottom: 0px; */
+  transition: color 0.2s ease-out;
+  cursor: pointer;
 }
 
-li .x-icon:hover{
+li .x-icon:hover {
   color: red;
   cursor: pointer;
 
@@ -91,11 +91,24 @@ li .x-icon:hover{
 
 li .x-icon:after {
   cursor: pointer;
-  content: '×'; 
+  content: '×';
 }
 
-li:hover .x-icon{
+li:hover .x-icon {
   display: block;
   cursor: pointer;
 }
+
+
+footer{
+	color: #777;
+	padding: 10px 15px;
+	text-align: center;
+	border-top: 1px solid #e6e6e6;
+  margin-top: 30%;
+
+}
+
+
+
 

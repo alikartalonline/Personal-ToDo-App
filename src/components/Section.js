@@ -1,8 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
-
-function Section({ todos, setTodos }) {
+function Section({ todos, setTodos, selectedTodos }) {
 
 
     // DELETE DATA FROM API
@@ -30,7 +29,7 @@ function Section({ todos, setTodos }) {
 
             <ul className='row mt-3'>
                 {
-                    todos.map((todo, i) => (
+                    selectedTodos.map((todo, i) => (
                         <li key={i}
                             className="col-6 mt-2 "
                         >
@@ -44,12 +43,11 @@ function Section({ todos, setTodos }) {
                                 />
 
                                 <label
-                                    className={
-                                        todo.isCompleted === true ?
-                                            "text-decoration-line-through" :
-                                            ""
-                                    }
-                                >{todo.content}</label>
+                                    className={todo.isCompleted === true ?
+                                    "text-decoration-line-through" : ""}
+                                    >
+                                    {todo.content}
+                                </label>
 
                                 <button
                                     className='btn x-icon border border-0 '

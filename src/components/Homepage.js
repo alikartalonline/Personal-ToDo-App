@@ -5,15 +5,15 @@ import axios from 'axios';
 
 // COMPONENTS
 import Section from './Section';
+import Footer from './Footer';
 
 
-// const initialFormValues = { content: "", isCompleted:true}
 
 function Homepage() {
 
     const [todos, setTodos] = useState([])
-    // const [form, setForm] = useState(initialFormValues)
     const [form, setForm] = useState({content:""})
+    const [selected, setSelected] = useState("All")
 
 
     // Api Axios Get
@@ -48,10 +48,17 @@ function Homepage() {
         setTodos(todos.concat([item]))
     }
 
+    // SELECTED LIST FILTER
+    let selectedTodos =  
+      selected === "All" ? todos :
+      selected === "Active" ? todos.filter(x => x.isCompleted === false) : 
+      todos.filter(x => x.isCompleted === true)
+
     return (
         <div className='container'>
             <div className='row'>
 
+                {/* FORM CONTAINER START */}
                 <div className='main-box container' >
 
                     <h1 className='col-12'>Todo App - Popupsmart React Practicum</h1>
@@ -81,12 +88,10 @@ function Homepage() {
                         </div>
                     </form>
 
-                <Section 
-                todos={todos} setTodos={setTodos}
-                />
-
-
+                <Section todos={todos} setTodos={setTodos} selectedTodos={selectedTodos} />
+                <Footer todos={todos} setSelected={setSelected}/>
                 </div>
+                {/* FORM CONTAINER FINISH */}
 
             </div>
         </div>

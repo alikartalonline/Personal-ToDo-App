@@ -1,11 +1,14 @@
 import React from 'react'
 
-function Footer() {
+function Footer({ setSelected }) {
+
 
   return (
-    <div>
-        
-    </div>
+    <footer className='foot'>
+        <button className='btn text-white' onClick={() => setSelected("All") }>All</button>
+        <button className='btn text-white' onClick={() => setSelected("Active") }>Active</button>
+        <button className='btn text-white' onClick={() => setSelected("Completed") }>Completed</button>
+    </footer>
   )
 }
 
