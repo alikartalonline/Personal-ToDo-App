@@ -9,10 +9,10 @@ import Footer from './Footer';
 
 
 
-function Homepage() {
+function Homepage({ user, setUser }) {
 
     const [todos, setTodos] = useState([])
-    const [form, setForm] = useState({content:""})
+    const [form, setForm] = useState({ content: "" })
     const [selected, setSelected] = useState("All")
 
 
@@ -49,19 +49,45 @@ function Homepage() {
     }
 
     // SELECTED LIST FILTER
-    let selectedTodos =  
-      selected === "All" ? todos :
-      selected === "Active" ? todos.filter(x => x.isCompleted === false) : 
-      todos.filter(x => x.isCompleted === true)
+    let selectedTodos =
+        selected === "All" ? todos :
+            selected === "Active" ? todos.filter(x => x.isCompleted === false) :
+                todos.filter(x => x.isCompleted === true)
+
+
+    const userDelete = () => {
+        setUser("")
+    }
 
     return (
         <div className='container'>
             <div className='row'>
 
-                {/* FORM CONTAINER START */}
-                <div className='main-box container' >
+                {/* USER SECTION START */}
+                <div className='col-12 userDiv'>
 
-                    <h1 className='col-12'>Todo App - Popupsmart React Practicum</h1>
+                    <div className='col-2'></div>
+
+                    <div className='col-9'>
+                        Welcome "<span className='text-warning'>{user}</span>"
+                        <button
+                            className='btn btn-outline-warning border-0 float-end'
+                            onClick={() => userDelete()}
+                        >
+                            Delete User
+                        </button>
+                    </div>
+
+                    <div className='col-2'></div>
+
+                </div>
+                {/* USER SECTION FINISH */}
+
+
+                {/* TODO FORM CONTAINER START */}
+                <div className='main-box container ' >
+
+                    <h1 className='col-12 text-warning mb-4'>"Todo App" - Popupsmart React Practicum</h1>
 
                     <form className='row' onSubmit={handleSubmit}>
                         <div className='form-floating col-10' >
@@ -88,10 +114,10 @@ function Homepage() {
                         </div>
                     </form>
 
-                <Section todos={todos} setTodos={setTodos} selectedTodos={selectedTodos} />
-                <Footer todos={todos} setSelected={setSelected}/>
+                    <Section todos={todos} setTodos={setTodos} selectedTodos={selectedTodos} />
+                    <Footer todos={todos} setSelected={setSelected} />
                 </div>
-                {/* FORM CONTAINER FINISH */}
+                {/* TODO FORM CONTAINER FINISH */}
 
             </div>
         </div>

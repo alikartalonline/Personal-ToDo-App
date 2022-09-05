@@ -27,8 +27,12 @@ function Section({ todos, setTodos, selectedTodos }) {
     return (
         <div className='container'>
 
-            <ul className='row mt-3'>
+            <ul className='row mt-5'>
                 {
+                selectedTodos == "" ? 
+                <div className="spinner-border text-warning mt-5 ms-5" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div> :
                     selectedTodos.map((todo, i) => (
                         <li key={i}
                             className="col-6 mt-2 "
@@ -44,8 +48,8 @@ function Section({ todos, setTodos, selectedTodos }) {
 
                                 <label
                                     className={todo.isCompleted === true ?
-                                    "text-decoration-line-through" : ""}
-                                    >
+                                        "text-decoration-line-through" : ""}
+                                >
                                     {todo.content}
                                 </label>
 

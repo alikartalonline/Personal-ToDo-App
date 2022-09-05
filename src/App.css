@@ -6,17 +6,30 @@ body {
   box-sizing: border-box;
 }
 
+.userDiv {
+  text-align: center;
+  color: #ffff;
+  margin-top: 10%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  
+}
+
+.userDiv span:hover{
+  background-color: rgb(139, 134, 134);
+  font-size: 25px;
+  cursor: pointer;
+}
+
 
 .main-box {
-  margin-top: 10%;
   color: #ffff;
   border: 1px solid orange;
   border-radius: 1.2em;
   width: 50%;
 
-  /* şimdilik böyle dursun sonra değiştireceğiz */
-    min-height: 60vh;
-    max-height: fit-content;
+  min-height: 60vh;
+  max-height: fit-content;
 }
 
 .main-box h1 {
@@ -58,12 +71,7 @@ body {
 
 
 li {
-  /* list-style-type: circle; */
-  /* list-style-type: decimal; */
-  /* list-style-position: inside; */
   list-style: none;
-  /* text-align: center; */
-
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   letter-spacing: 0.05em;
   font-size: 18px;
@@ -78,7 +86,6 @@ li .x-icon {
   font-size: 20px;
   color: #cc9a9a;
   margin-top: -15px;
-  /* margin-bottom: 0px; */
   transition: color 0.2s ease-out;
   cursor: pointer;
 }
@@ -100,15 +107,12 @@ li:hover .x-icon {
 }
 
 
-footer{
-	color: #777;
-	padding: 10px 15px;
-	text-align: center;
-	border-top: 1px solid #e6e6e6;
+footer {
+  color: #777;
+  padding: 10px 15px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
   margin-top: 30%;
-
 }
-
-
 
 
