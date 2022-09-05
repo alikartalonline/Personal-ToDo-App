@@ -2,4 +2,4 @@
 
 <br>
 
-İlerleme Durumu : ![50%](https://progress-bar.dev/50)
+İlerleme Durumu : ![88%](https://progress-bar.dev/88)
