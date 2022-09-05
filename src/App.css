@@ -69,7 +69,6 @@ body {
 }
 
 
-
 li {
   list-style: none;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -80,8 +79,6 @@ li {
 
 li .x-icon {
   display: none;
-  /* position: absolute; */
-
   margin: auto 0;
   font-size: 20px;
   color: #cc9a9a;
@@ -93,7 +90,6 @@ li .x-icon {
 li .x-icon:hover {
   color: red;
   cursor: pointer;
-
 }
 
 li .x-icon:after {

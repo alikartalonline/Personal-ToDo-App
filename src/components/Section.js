@@ -26,13 +26,17 @@ function Section({ todos, setTodos, selectedTodos }) {
 
     return (
         <div className='container'>
-
             <ul className='row mt-5'>
-                {
+                
+                { 
+                // LOADING SPINNER BOOTSTRAP
                 selectedTodos == "" ? 
+
                 <div className="spinner-border text-warning mt-5 ms-5" role="status">
                     <span className="visually-hidden">Loading...</span>
-                </div> :
+                </div> 
+                :
+                    // TODOS MAP START
                     selectedTodos.map((todo, i) => (
                         <li key={i}
                             className="col-6 mt-2 "
@@ -60,7 +64,9 @@ function Section({ todos, setTodos, selectedTodos }) {
                             </div>
                         </li>
                     ))
+                    // TODOS MAP FINISH
                 }
+                
             </ul>
         </div>
     )

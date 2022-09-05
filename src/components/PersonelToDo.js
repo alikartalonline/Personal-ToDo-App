@@ -20,7 +20,7 @@ function PersonelToDo() {
             }, 2000)
             return false;
         }
-                
+
 
         setUser(form)
         setForm("")
@@ -31,7 +31,6 @@ function PersonelToDo() {
     }
 
     return (
-        <>
             <div className='container'>
                 <div className='row'>
                     {
@@ -67,7 +66,6 @@ function PersonelToDo() {
                                                 Create
                                             </button>
                                         </div>
-
                                         {
                                             alert === "Alert" ? <Alert /> : null
                                         }
@@ -75,14 +73,12 @@ function PersonelToDo() {
                                 </div>
                                 {/* CREATE USER FORM CONTAINER FINISH */}
                             </>
-                            : <Homepage user={user} setUser={setUser}/>
+                            : <Homepage user={user} setUser={setUser} />
                     }
-
 
                 </div>
             </div>
-        </>
     )
 }
 
-export default PersonelToDo
+export default PersonelToDo;
