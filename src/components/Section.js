@@ -52,7 +52,7 @@ function Section({ todos, setTodos, selectedTodos }) {
 
                                 <label
                                     className={todo.isCompleted === true ?
-                                        "text-decoration-line-through" : ""}
+                                        "text-decoration-line-through text-primary" : "text-dark"}
                                 >
                                     {todo.content}
                                 </label>
