@@ -6,5 +6,5 @@
 
 <br>
 
-<img src="" width="350" height="150" alt="ToDoApp" title="ToDoApp">
+<img src="https://github.com/alikartalonline/Todo-App-Popupsmart-React-Practicum/blob/main/gif/alikartalnonlineTodoApp.gif" width="350" height="150" alt="ToDoApp" title="ToDoApp">
 
