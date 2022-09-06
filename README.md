@@ -2,4 +2,9 @@
 
 <br>
 
-İlerleme Durumu : ![88%](https://progress-bar.dev/88)
+### Personel ToDo App: [Click to PLAY](https://alikartalonline-todo.netlify.app/)
+
+<br>
+
+<img src="" width="350" height="150" alt="ToDoApp" title="ToDoApp">
+
