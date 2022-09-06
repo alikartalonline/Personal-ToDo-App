@@ -4,7 +4,7 @@ import Alert from './Alert'
 
 function PersonelToDo() {
 
-    const [user, setUser] = useState("")
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem("userKey")) || "")
     const [form, setForm] = useState("")
     const [alert, setAlert] = useState(null)
 
@@ -24,6 +24,7 @@ function PersonelToDo() {
 
         setUser(form)
         setForm("")
+        localStorage.setItem("userKey", JSON.stringify(form))
     }
 
     const onChangeInput = (e) => {
