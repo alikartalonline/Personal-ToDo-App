@@ -80,7 +80,14 @@ function Homepage({ user, setUser }) {
                     <div className='col-2'></div>
 
                     <div className='col-9'>
-                        Welcome "<span className='text-warning'>{user}</span>"
+                        Welcome 
+                        <div className='btn fs-5 x border-0 position-relative text-warning mb-2'>"{user}"
+                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                                {todos.length} 
+                            </span>
+                        </div>
+
+
                         <button
                             className='btn btn-outline-warning border-0 float-end'
                             onClick={() => userDelete()}
@@ -96,7 +103,7 @@ function Homepage({ user, setUser }) {
 
 
                 {/* TODO FORM CONTAINER START */}
-                <div className='main-box container ' >
+                <div className='main-box container' >
 
                     <h1 className='col-12 text-warning mb-4'>"Todo App" - Popupsmart React Practicum</h1>
 

@@ -37,10 +37,11 @@ body {
 }
 
 
-.userDiv span:hover {
-  background-color: rgb(139, 134, 134);
-  font-size: 25px;
-  cursor: pointer;
+.userDiv .x:hover {
+  /* background-color: rgb(152, 151, 151); */
+  background-color: rgb(150%, 150%, 15%, 10%);
+  font-weight: 600;
+  cursor: alias;
 }
 
 
