@@ -110,7 +110,7 @@ li .x-icon {
   display: none;
   margin: auto 0;
   font-size: 20px;
-  color: #cc9a9a;
+  color: #b66060;
   margin-top: -15px;
   transition: color 0.2s ease-out;
   cursor: pointer;
@@ -156,7 +156,12 @@ footer .btn3:hover{
 color: blue;
 }
 
-
+.wordalert{
+  height: 10px;
+  white-space: nowrap;
+  width: 70%;
+  opacity: 0.85;
+}
 
 
 
