@@ -2,7 +2,7 @@
 
 <br>
 
-### Personel ToDo App: [Click to PLAY](https://alikartalonline-todo.netlify.app/)
+### Personel ToDo App: [Click to View](https://alikartalonline-todo.netlify.app/)
 
 ```
 API: https://mockapi.io/ 
