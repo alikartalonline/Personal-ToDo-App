@@ -34,8 +34,8 @@ function Section({ todos, setTodos, selectedTodos }) {
 
                 <div className="spinner-border text-warning mt-5 ms-5" role="status">
                     <span className="visually-hidden">Loading...</span>
-                </div> 
-                :
+                </div>  : 
+                
                     // TODOS MAP START
                     selectedTodos.map((todo, i) => (
                         <li key={i}
@@ -44,10 +44,9 @@ function Section({ todos, setTodos, selectedTodos }) {
                             <div className='d-flex form-check'>
                                 <input
                                     className="toggle m-2 form-check-input"
-                                    id="flexCheckDefault"
-                                    type="checkbox"
+                                    type="checkbox" value="" id="flexCheckDefault"
                                     checked={todo.isCompleted}
-                                    onClick={() => updateCompleteTodos(todo.content)}
+                                    onChange={() => updateCompleteTodos(todo.content)}
                                 />
 
                                 <label
@@ -58,7 +57,8 @@ function Section({ todos, setTodos, selectedTodos }) {
                                 </label>
 
                                 <button
-                                    className='btn x-icon border border-0 '
+                                    className={todo.isCompleted === true ?
+                                        "btn x-icon border border-0 text-danger" : "btn x-icon border border-0"}
                                     onClick={() => deleteTodo(todo.id)}
                                 ></button>
                             </div>
