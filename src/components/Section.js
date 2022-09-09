@@ -41,13 +41,16 @@ function Section({ todos, setTodos, selectedTodos }) {
                         <li key={i}
                             className="col-6 mt-2 "
                         >
-                            <div className='d-flex form-check'>
+                            <div className='d-flex '>
+                                
+                                <div className='form-check'>
                                 <input
                                     className="toggle m-2 form-check-input"
                                     type="checkbox" value="" id="flexCheckDefault"
                                     checked={todo.isCompleted}
                                     onChange={() => updateCompleteTodos(todo.content)}
-                                />
+                                    />
+                                </div>
 
                                 <label
                                     className={todo.isCompleted === true ?
