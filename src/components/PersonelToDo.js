@@ -9,6 +9,7 @@ function PersonelToDo() {
     const [alert, setAlert] = useState(null)
 
 
+    // FORM
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -21,15 +22,16 @@ function PersonelToDo() {
             return false;
         }
 
-
         setUser(form)
         setForm("")
         localStorage.setItem("userKey", JSON.stringify(form))
-    }
+    };
 
+    // INPUT
     const onChangeInput = (e) => {
         setForm([e.target.value].toString())
-    }
+    };
+
 
     return (
             <div className='container'>
