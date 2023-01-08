@@ -76,68 +76,70 @@ function Homepage({ user, setUser }) {
 
                 {/* USER SECTION START */}
                 <div className='col-12 userDiv'>
+                    <div className='row '>
 
-                    <div className='col-2'></div>
-
-                    <div className='col-9'>
-                        Welcome 
-                        <div className='btn fs-5 x border-0 position-relative text-warning mb-2'>"{user}"
-                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-                                {todos.length} 
-                            </span>
+                        <div className='col-8 col-sm-8 col-md-8 col-lg-7 ms-4 '>
+                            Welcome
+                            <div className='btn fs-5 x border-0 position-relative text-warning mb-2 '>"{user}"
+                                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+                                    {todos.length}
+                                </span>
+                            </div>
                         </div>
 
 
-                        <button
-                            className='btn btn-outline-warning border-0 float-end'
-                            onClick={() => userDelete()}
-                        >
-                            Delete User
-                        </button>
+                        <div className='col-6 col-sm-6 col-md-1 col-lg-2 '>
+                            <button
+                                className='btn btn-outline-warning border-0 float-end'
+                                onClick={() => userDelete()}
+                            >
+                                Delete User
+                            </button>
+                        </div>
+                        
                     </div>
-
-                    <div className='col-2'></div>
-
                 </div>
                 {/* USER SECTION FINISH */}
 
 
                 {/* TODO FORM CONTAINER START */}
-                <div className='main-box container' >
+                <div className='main-box container-fluid' >
+                    <div className='row'>
 
-                    <h1 className='col-12 text-warning mb-4'>"Todo App" - Popupsmart React Practicum</h1>
+                        <h1 className='col-12 text-warning mb-4'>Personal Todo App</h1>
 
-                    <form className='row' onSubmit={handleSubmit}>
-                        <div className='form-floating col-10' >
-                            <input
-                                className="form-control task-div col-10"
-                                placeholder="Things To Do"
-                                id="floatingInput"
-                                name='content'
-                                value={form.content}
-                                onChange={onChangeInput}
-                                autoFocus
-                            >
-                            </input>
-                            <label htmlFor="floatingInput" className='text-primary'>Things To Do</label>
-                        </div>
+                        <form className='row' onSubmit={handleSubmit}>
+                            <div className='form-floating col-10' >
+                                <input
+                                    className="form-control task-div col-10"
+                                    placeholder="Things To Do"
+                                    id="floatingInput"
+                                    name='content'
+                                    value={form.content}
+                                    onChange={onChangeInput}
+                                    autoFocus
+                                >
+                                </input>
+                                <label htmlFor="floatingInput" className='text-primary'>Things To Do</label>
+                            </div>
 
-                        <div className='col-2'>
-                            <button
-                                type='submit'
-                                value="submit"
-                                className='btn btn-primary rounded-circle add'>
-                                ADD
-                            </button>
-                        </div>
-                    </form>
+                            <div className='col-2'>
+                                <button
+                                    type='submit'
+                                    value="submit"
+                                    className='btn btn-primary rounded-circle add'>
+                                    ADD
+                                </button>
+                            </div>
+                        </form>
 
-                    {
-                        wordAlert === "WordAlert" ? <WordAlert /> : null
-                    }
+                        {
+                            wordAlert === "WordAlert" ? <WordAlert /> : null
+                        }
 
-                    <Section todos={todos} setTodos={setTodos} selectedTodos={selectedTodos} />
-                    <Footer todos={todos} setSelected={setSelected} />
+                        <Section todos={todos} setTodos={setTodos} selectedTodos={selectedTodos} />
+                        <Footer todos={todos} setSelected={setSelected} />
+                    </div>
 
                 </div>
                 {/* TODO FORM CONTAINER FINISH */}

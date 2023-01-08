@@ -39,7 +39,7 @@ function Section({ todos, setTodos, selectedTodos }) {
                     // TODOS MAP START
                     selectedTodos.map((todo, i) => (
                         <li key={i}
-                            className="col-6 mt-2 "
+                            className="col-md-8  me-md-auto     col-lg-6 mt-2"
                         >
                             <div className='d-flex '>
                                 
