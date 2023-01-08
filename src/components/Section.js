@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
+import React, { useEffect } from 'react';
+import axios from 'axios';
 
 function Section({ todos, setTodos, selectedTodos }) {
 
@@ -11,7 +11,7 @@ function Section({ todos, setTodos, selectedTodos }) {
             x => x.id !== item
         );
         setTodos(newTodo)
-    }
+    };
 
     // UPDATE CHECKBOX AND COMPLETE TODO
     const updateCompleteTodos = (content) => {
@@ -21,32 +21,14 @@ function Section({ todos, setTodos, selectedTodos }) {
         const newTodos = [...todos];
         newTodos[index] = todo;
         setTodos(newTodos);
-    }
+    };
 
     useEffect(() => {
-
         setTimeout(() => {
             for (let i = 0; i <= 15; i++) {
                 axios.delete(`https://630f37fc37925634188a39d5.mockapi.io/todos/${i}`)
             }
-        }, 60000)
-
-        if (todos == "") {
-            setTodos([
-                {
-                    content: "Note1"
-                },
-                {
-                    content: "Note2"
-                },
-                {
-                    content: "Note3"
-                },
-                {
-                    content: "Note4"
-                }
-            ])
-        }
+        }, 30000)
     }, [setTodos, todos]);
 
 

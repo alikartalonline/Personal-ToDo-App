@@ -11,17 +11,31 @@ import WordAlert from './WordAlert';
 
 function Homepage({ user, setUser }) {
 
-    const [todos, setTodos] = useState([])
-    const [form, setForm] = useState({ content: "" })
-    const [selected, setSelected] = useState("All")
-    const [wordAlert, setWordAlert] = useState(null)
+    const [todos, setTodos] = useState([
+                {
+                    content: "Note1"
+                },
+                {
+                    content: "Note2"
+                },
+                {
+                    content: "Note3"
+                },
+                {
+                    content: "Note4"
+                }
+            ]);
+
+    const [form, setForm] = useState({ content: "" });
+    const [selected, setSelected] = useState("All");
+    const [wordAlert, setWordAlert] = useState(null);
 
     // Api Axios Get
     useEffect(() => {
         axios.get("https://630f37fc37925634188a39d5.mockapi.io/todos")
-            .then(res => setTodos(res.data))
+            .then(res => setTodos(todos.concat(res.data)))
             .catch(err => console.log(err))
-    }, [])
+    }, []);
 
 
     // FORM
