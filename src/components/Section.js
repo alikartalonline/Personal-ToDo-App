@@ -26,7 +26,7 @@ function Section({ todos, setTodos, selectedTodos }) {
 
     useEffect(() => {
         setTimeout(() => {
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i <= 15; i++) {
                 axios.delete(`https://630f37fc37925634188a39d5.mockapi.io/todos/${i}`)
                 setTodos([
                     {
