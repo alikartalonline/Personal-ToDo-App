@@ -23,28 +23,32 @@ function Section({ todos, setTodos, selectedTodos }) {
         setTodos(newTodos);
     }
 
-
     useEffect(() => {
+
         setTimeout(() => {
             for (let i = 0; i <= 15; i++) {
                 axios.delete(`https://630f37fc37925634188a39d5.mockapi.io/todos/${i}`)
-                setTodos([
-                    {
-                        content: "Note1"
-                    },
-                    {
-                        content: "Note2"
-                    },
-                    {
-                        content: "Note3"
-                    },
-                    {
-                        content: "Note4"
-                    }
-                ])
             }
         }, 60000)
-    }, [setTodos])
+
+        if (todos == "") {
+            setTodos([
+                {
+                    content: "Note1"
+                },
+                {
+                    content: "Note2"
+                },
+                {
+                    content: "Note3"
+                },
+                {
+                    content: "Note4"
+                }
+            ])
+        }
+    }, [setTodos, todos]);
+
 
     return (
         <div className='container'>
