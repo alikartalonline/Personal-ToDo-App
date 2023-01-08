@@ -1,4 +1,4 @@
-# TodoApp - Popupsmart React Practicum
+# Personal ToDo-App
 
 <br>
 
