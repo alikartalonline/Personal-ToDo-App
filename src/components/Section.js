@@ -43,7 +43,7 @@ function Section({ todos, setTodos, selectedTodos }) {
                     }
                 ])
             }
-        }, 25000)
+        }, 60000)
     }, [setTodos])
 
     return (
