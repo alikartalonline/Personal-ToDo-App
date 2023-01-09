@@ -13,16 +13,20 @@ function Homepage({ user, setUser }) {
 
     const [todos, setTodos] = useState([
                 {
-                    content: "Note1"
+                    content: "Note1",
+                    id: 33
                 },
                 {
-                    content: "Note2"
+                    content: "Note2",
+                    id: 66
                 },
                 {
-                    content: "Note3"
+                    content: "Note3",
+                    id: 88
                 },
                 {
-                    content: "Note4"
+                    content: "Note4",
+                    id: 99
                 }
             ]);
 
